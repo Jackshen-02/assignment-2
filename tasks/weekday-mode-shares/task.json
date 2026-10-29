@@ -1,0 +1,6 @@
+{
+  "task_id": "weekday-mode-shares",
+  "task_class": "filtered aggregation",
+  "instructions": "Using matplotlib, create a pie chart from these synthetic trip records. Each record lists district, day type, travel mode, and trip count. Multiple records for the same mode are separate batches and should be added together.\n\nCentral, weekday, Bus, 20\nCentral, weekday, Bus, 40\nCentral, weekday, Bicycle, 10\nCentral, weekday, Bicycle, 20\nCentral, weekday, Walking, 4\nCentral, weekday, Walking, 6\nCentral, weekend, Bus, 90\nCentral, weekend, Bicycle, 5\nCentral, weekend, Walking, 5\nWest, weekday, Bus, 10\nWest, weekday, Bicycle, 80\nWest, weekday, Walking, 10\n\nKeep only weekday records from Central. Sum the trip counts by travel mode and calculate each mode's percentage of the total trips in those retained records. Draw one slice per mode. Label each slice with its mode and percentage to one decimal place. Use blue for Bus, orange for Bicycle, and green for Walking. Use the title 'Weekday travel in Central' and equal axis scaling so the pie is circular. Use a 6 by 5 inch figure at 150 DPI. Keep all text fully visible and readable, and save figure.png.",
+  "inputs": []
+}

@@ -1,0 +1,894 @@
+{
+  "predictions": [
+    {
+      "run_id": "001",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "004",
+      "errors": []
+    },
+    {
+      "run_id": "008",
+      "errors": []
+    },
+    {
+      "run_id": "009",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The data must be ordered by release date, with the earliest date first. Observed: The 'dates' list is in descending order (from 2019 to 2014), which is the reverse of the chronological order. The plot shows the dates in this reverse order, with the earliest date (2014-08-26) on the far right and the latest (2019-02-26) on the far left."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The x tick labels must be rotated by 30 degrees. Observed: The code uses 'plt.setp(ax.get_xticklabels(), rotation=0, ha='center')', which sets the rotation to 0 degrees, not 30 degrees."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis tick labels at the far left and far right are cut off at the image boundaries.\nThe text 'v1.4.0' and 'v1.4.1' are very close to each other and partially overlap."
+        }
+      ]
+    },
+    {
+      "run_id": "010",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "013",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: color the polygons with the reversed plasma colormap Observed: facecolors = plt.colormaps[â€œrainbowâ€](np.linspace(0, 1, len(verts))) in the final script, which uses the rainbow colormap instead of reversed plasma\nRequired: set x-axis limits to 0..20 Observed: ax.set_xlim(-5, 25) in the final script, which does not match the required 0..20\nRequired: set appropriate x-axis, y-axis and z-axis limits Observed: ax.set_xlim(-5, 25), ax.set_ylim(2, 10), ax.set_zlim(0, 0.45) in the final script"
+        }
+      ]
+    },
+    {
+      "run_id": "016",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Drop every version whose share is below 0.5%. Observed: The code does not filter the data. The `df` DataFrame is used directly in the outer pie plot without any filtering. The input data includes versions with shares below 0.5% (e.g., Chrome 72.0 with 1.19, but also Firefox 52.0 with 0.5, and others below 0.5). The final chart shows all versions, including those with shares below 0.5% (e.g., 'Chrome 69.0', 'Firefox 60.0', 'Safari 10.1', etc.)."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: A legend naming the browsers is shown. Observed: The code does not create a legend. The browser names are displayed on the inner ring, but there is no separate legend."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "Text labels for browser versions on the left side of the chart are cut off at the image boundary.\nThe text 'Firefox' and 'Safari' in the inner ring are partially obscured by the outer ring's labels.\nThe different versions of Chrome are represented by similar shades of blue, making them difficult to distinguish from each other."
+        }
+      ]
+    },
+    {
+      "run_id": "021",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "All four box plots are identical in color and style, making them indistinguishable from one another."
+        }
+      ]
+    },
+    {
+      "run_id": "022",
+      "errors": []
+    },
+    {
+      "run_id": "023",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Create two plots in a single figure of two rows. Observed: The script uses `plt.subplots(ncols=2, figsize=(7, 9))` to create a figure with two subplots side-by-side, not in two rows.\nRequired: Arrange the two panels in a 2x1 grid of subplots. Observed: The script uses `ncols=2` to create a 1x2 grid, not a 2x1 grid.\nRequired: Mark the original data points with circular markers. Observed: The script does not mark the original data points with circular markers."
+        }
+      ]
+    },
+    {
+      "run_id": "025",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Use 'Major Area', 'Regions', and 'Country' for hierarchy Observed: The code attempts to use these columns for hierarchy, but the chart is a pie chart with 'Country' labels, not a sunburst chart."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Sunburst chart with a hollow center Observed: The chart is a pie chart with a hollow center, but it is not a sunburst chart.\nRequired: Hierarchy: 'Major Area', 'Regions', 'Country' Observed: The chart labels only 'Country' and does not show the hierarchy.\nRequired: Legend for regions: Europe (dark green), Asia (yellow), Americas (blue), Oceania (purple), Africa (green) Observed: The chart does not have a legend for regions.\nRequired: Chart type: Sunburst Observed: The chart is a pie chart, not a sunburst chart.\nRequired: Color coding for regions Observed: The chart does not use color coding for regions."
+        }
+      ]
+    },
+    {
+      "run_id": "026",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The text '/CAfricaa' in the center of the chart is partially cut off at the bottom edge of the inner circle."
+        }
+      ]
+    },
+    {
+      "run_id": "028",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: A blue curve that connects the data points from the year 2015. Observed: The code highlights the year 2015 with a blue line (`color='blue'`) and connects the points with a line (`'-o'`), but the highlighted year is set to 2014 (`highlight = 2014`), not 2015. The 2015 data is plotted as a scatter plot with a color from the colormap, not a blue curve."
+        }
+      ]
+    },
+    {
+      "run_id": "029",
+      "errors": []
+    },
+    {
+      "run_id": "030",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Set the figure suptitle to exactly 'Sharing x per column, y per row' Observed: The script sets the suptitle to 'Shared axes', which does not match the required title.\nRequired: The color for the third plot should be yellow Observed: The script uses 'gold' as the color for the third plot, which is not yellow."
+        }
+      ]
+    },
+    {
+      "run_id": "031",
+      "errors": []
+    },
+    {
+      "run_id": "034",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Give the chart a title. Observed: The final figure does not contain a title. The code in STEP 10 does not include a `set_title` call.\nRequired: Remove the x and y ticks entirely. Observed: The code in STEP 10 includes `ax.set_xticks(range(15))` and `ax.set_yticks(range(15))`, which explicitly sets the ticks. The figure shows ticks on both axes.\nRequired: The chart has a title. Observed: The chart does not have a title.\nRequired: The chart has no x and y ticks. Observed: The chart has x and y ticks."
+        }
+      ]
+    },
+    {
+      "run_id": "038",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: X-tick label rotation: 30 degrees Observed: The code sets `ax.set_xticklabels(days, rotation=0)`, which is 0 degrees, not 30.\nRequired: Color for non-smokers: grey Observed: The code uses `colors['right'] = black` for non-smokers, which is not grey."
+        }
+      ]
+    },
+    {
+      "run_id": "039",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Plot a straight line y=x with longitude values from -180 to 180. Observed: The script generates lon = np.linspace(-180, 180, 1000) and lat = lon, which defines y=x. However, the plot shows a non-linear curve due to the Mercator projection applied to the latitude, not a straight line in the final plot."
+        }
+      ]
+    },
+    {
+      "run_id": "046",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The script implements a function named 'branch' that creates a side chain on the diagram. Observed: The script defines a function named 'side' that creates a side chain, but it is not named 'branch' as required.\nRequired: The script implements a function named 'turn' to generate a corner link in the diagram. Observed: The script defines a function named 'corner' that generates a corner link, but it is not named 'turn' as required.\nRequired: The diagram should have 8 chains on each side, created using the 'branch' function. Observed: The script calls the 'side' function with n=8, creating 8 chains on each side, but the function is named 'side' not 'branch'.\nRequired: The script uses the 'branch' and 'turn' functions in a specified sequence to construct the final flowchart diagram. Observed: The script uses the 'side' and 'corner' functions in a specified sequence, but they are not named 'branch' and 'turn'."
+        }
+      ]
+    },
+    {
+      "run_id": "047",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image displays a single blue bar that reaches 100% on the y-axis, labeled as 'Percentage Share (%)'. The x-axis is labeled 'Country' with a single tick mark labeled '47.9'. The legend indicates a single category: '(Percentage, renewables)'. There is no visible separation into multiple bars for different countries, nor are there stacked segments for nuclear, fossil, and renewables. The chart appears to be a single bar with incorrect labeling and missing data for the required countries and sources."
+        }
+      ]
+    },
+    {
+      "run_id": "050",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Flow values: 100%, 20%, 20%, 20%, 20%, 10% Observed: The code in STEP 6 defines flow_values = [100, 20, 20, 20, 20, 10]. The figure shows '100%' between Phase 1 and 2, '20%' between Phases 2-3, 3-4, 4-5, and '20%' between Phase 5 and Hurray! (note: the value for the final transition is 20%, not 10%).\nRequired: Decreasing magnitude of flow values Observed: The flow values are [100, 20, 20, 20, 20, 10]. The values from Phase 1 to Phase 5 are not decreasing (100, 20, 20, 20, 20). The final value of 10 is less than the previous, but the sequence is not monotonically decreasing."
+        }
+      ]
+    },
+    {
+      "run_id": "051",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Do NOT use the jet, rainbow or hsv colormaps anywhere Observed: The second subplot uses `cmap='jet'`, which violates the requirement.\nRequired: The second subplot should have varying color using the 'summer' colormap Observed: The second subplot uses `cmap='jet'`, not 'summer'."
+        }
+      ]
+    },
+    {
+      "run_id": "052",
+      "errors": []
+    },
+    {
+      "run_id": "053",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "055",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The text 'Peak: 412 visits' is positioned directly over the data point for Thursday, partially obscuring the point and the line.\nThe annotation text 'Peak: 412 visits' covers the data point for Thursday and the line segment connecting it to Friday."
+        }
+      ]
+    },
+    {
+      "run_id": "059",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: x tick labels rotated by 45 degrees Observed: x tick labels are not rotated; they are set with fontsize=16 but no rotation"
+        }
+      ]
+    },
+    {
+      "run_id": "060",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The figure must be saved at 120 dpi. Observed: The code at STEP 14 uses fig.savefig('figure.png'). The default DPI for matplotlib is 100, and there is no explicit dpi parameter set. The final figure was saved without specifying DPI."
+        }
+      ]
+    },
+    {
+      "run_id": "062",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The plot must be saved with a DPI of 100. Observed: The script does not specify a DPI, so the default DPI is used. The requirement for a specific DPI is not met.\nRequired: The plot must have a legend. Observed: The plot does not have a legend.\nRequired: The plot must have a colorbar. Observed: The plot does not have a colorbar.\nRequired: The plot must have a grid. Observed: The plot does not have a grid.\nRequired: The plot must have a title font size of 14. Observed: The script does not specify a font size for the title.\nRequired: The plot must have a title font weight of bold. Observed: The script does not specify a font weight for the title.\nRequired: The plot must have a title font style of italic. Observed: The script does not specify a font style for the title.\nRequired: The plot must have a title font family of sans-serif. Observed: The script does not specify a font family for the title.\nRequired: The plot must have a title font color of black. Observed: The script does not specify a font color for the title.\nRequired: The plot must have a title font rotation of 0 degrees. Observed: The script does not specify a font rotation for the title.\nRequired: The plot must have a title font stretch of normal. Observed: The script does not specify a font stretch for the title.\nRequired: The plot must have a title font variant of normal. Observed: The script does not specify a font variant for the title.\nRequired: The plot must have a title font size of 14. Observed: The script does not specify a font size for the title.\nRequired: The plot must have a title font weight of bold. Observed: The script does not specify a font weight for the title.\nRequired: The plot must have a title font style of italic. Observed: The script does not specify a font style for the title.\nRequired: The plot must have a title font family of sans-serif. Observed: The script does not specify a font family for the title.\nRequired: The plot must have a title font color of black. Observed: The script does not specify a font color for the title.\nRequired: The plot must have a title font rotation of 0 degrees. Observed: The script does not specify a font rotation for the title.\nRequired: The plot must have a title font stretch of normal. Observed: The script does not specify a font stretch for the title.\nRequired: The plot must have a title font variant of normal. Observed: The script does not specify a font variant for the title.\nRequired: The plot must have a title font size of 14. Observed: The script does not specify a font size for the title.\nRequired: The plot must have a title font weight of bold. Observed: The script does not specify a font weight for the title.\nRequired: The plot must have a title font style of italic. Observed: The script does not specify a font style for the title.\nRequired: The plot must have a title font family of sans-serif. Observed: The script does not specify a font family for the title.\nRequired: The plot must have a title font color of black. Observed: The script does not specify a font color for the title.\nRequired: The plot must have a title font rotation of 0 degrees. Observed: The script does not specify a font rotation for the title.\nRequired: The plot must have a title font stretch of normal. Observed: The script does not specify a font stretch for the title.\nRequired: The plot must have a title font variant of normal. Observed: The script does not specify a font variant for the title."
+        }
+      ]
+    },
+    {
+      "run_id": "065",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "068",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Draw the y=x line as a dotted line Observed: The line is drawn as a solid line, not a dotted line.\nRequired: Set the x axis limits to -180..180 Observed: The x-axis limits are set to -200, 200, which is outside the required range of -180 to 180."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The x-axis label 'Longitude' is partially cut off at the bottom edge of the image, and the rightmost part of the x-axis tick label '200' is also cut off."
+        }
+      ]
+    },
+    {
+      "run_id": "069",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The data is not dropped or filtered. Observed: The script uses `df.dropna()` which removes rows with missing values. This is a violation of the requirement to treat 'NA' as a string, not a missing value."
+        }
+      ]
+    },
+    {
+      "run_id": "070",
+      "errors": []
+    },
+    {
+      "run_id": "074",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The plot uses different line styles for the two series. Observed: Both lines are solid lines ('-'), so they have the same line style.\nRequired: The plot uses different line styles for the two series. Observed: The plot uses the same line style ('-') for both series."
+        }
+      ]
+    },
+    {
+      "run_id": "075",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Grid: turned on in first subplot Observed: Code does not include ax1.grid(True); grid is not shown in the figure."
+        }
+      ]
+    },
+    {
+      "run_id": "077",
+      "errors": []
+    },
+    {
+      "run_id": "079",
+      "errors": []
+    },
+    {
+      "run_id": "080",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Print each bar's checkout count above (or on) the bar as a plain integer with no thousands separator. Observed: The code does not include any text annotations to display the checkout counts above the bars, so this requirement is not met."
+        }
+      ]
+    },
+    {
+      "run_id": "081",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image displays a 2D color gradient plot with axes labeled 'r' and 'g', but no third dimension or 3D voxel structure is visible. It appears to be a 2D heatmap rather than a 3D voxel plot. There is no indication of a 3D perspective, depth, or cube structure. The plot lacks the required 3D visualization elements and does not meet the task's requirements for a 3D voxel plot."
+        }
+      ]
+    },
+    {
+      "run_id": "082",
+      "errors": []
+    },
+    {
+      "run_id": "083",
+      "errors": []
+    },
+    {
+      "run_id": "086",
+      "errors": []
+    },
+    {
+      "run_id": "087",
+      "errors": []
+    },
+    {
+      "run_id": "089",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "090",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart must have a legend. Observed: The chart does not have a legend.\nRequired: The chart must have a colorbar. Observed: The chart does not have a colorbar.\nRequired: The chart must have a grid. Observed: The chart does not have a grid.\nRequired: The chart must have a subtitle. Observed: The chart does not have a subtitle.\nRequired: The chart must have a source citation. Observed: The chart does not have a source citation.\nRequired: The chart must have a footnote. Observed: The chart does not have a footnote.\nRequired: The chart must have a caption. Observed: The chart does not have a caption.\nRequired: The chart must have a subtitle. Observed: The chart does not have a subtitle.\nRequired: The chart must have a source citation. Observed: The chart does not have a source citation.\nRequired: The chart must have a footnote. Observed: The chart does not have a footnote.\nRequired: The chart must have a caption. Observed: The chart does not have a caption."
+        }
+      ]
+    },
+    {
+      "run_id": "091",
+      "errors": []
+    },
+    {
+      "run_id": "096",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "097",
+      "errors": []
+    },
+    {
+      "run_id": "098",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Use different left and right scales Observed: The final code does not use different left and right scales. It uses a single y-axis for both data series, which is evident from the single y-axis label 'Amplitude' and the shared scale."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Different left and right scales Observed: The figure uses a single y-axis for both data series, not different left and right scales. The y-axis is labeled 'Amplitude' and both data series share this scale."
+        }
+      ]
+    },
+    {
+      "run_id": "099",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Remove the y ticks (the radial tick labels) entirely. Observed: The code includes `ax.grid(False)` which removes the gridlines, but the radial tick labels are still visible in the figure.\nRequired: Keep the polar gridlines turned on. Observed: The code includes `ax.grid(False)` which turns off the gridlines."
+        }
+      ]
+    },
+    {
+      "run_id": "103",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "104",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart has a legend. Observed: The chart does not have a legend.\nRequired: The chart has a colorbar. Observed: The chart does not have a colorbar."
+        }
+      ]
+    },
+    {
+      "run_id": "105",
+      "errors": []
+    },
+    {
+      "run_id": "106",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Use the CMRmap colormap; do NOT use the jet, rainbow or hsv colormaps. Observed: The code in STEP 14 uses `cmap='jet'` in the `tricontourf` function, which violates the requirement to use 'CMRmap'. The plot uses a jet-like colormap, not CMRmap.\nRequired: Add a colorbar. Observed: The code in STEP 14 does not include a command to add a colorbar. The final figure also does not display a colorbar."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Colorbar: required but not present. Observed: The plot does not have a colorbar, which violates the requirement.\nRequired: Colors and styles: use CMRmap colormap. Observed: The plot uses the 'jet' colormap, not 'CMRmap', which violates the requirement.\nRequired: Colorbar: required but not present. Observed: The plot does not have a colorbar, which violates the requirement."
+        }
+      ]
+    },
+    {
+      "run_id": "108",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "All four line plots use the same color and marker style, making them indistinguishable without reference to the city titles."
+        }
+      ]
+    },
+    {
+      "run_id": "111",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: y values should be an array of 30 random numbers Observed: The y values are discrete layers (0, 1, 2, 3), not 30 random numbers. The task request is ambiguous, but the code does not generate 30 random y values."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The y-axis labels 'y=0', 'y=1', 'y=2', 'y=3' are positioned close to the bars and are partially obscured by the bars in the foreground."
+        }
+      ]
+    },
+    {
+      "run_id": "112",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The lower panel's y axis must start at 0. Observed: The lower panel's y-axis limit is set to ax_bot.set_ylim(1, 12), which starts at 1, not 0. The actual plot shows the y-axis starting at approximately 2.5, not 0."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Make the figure 7 by 6 inches. Observed: The figure size is set to figsize=(5, 4), which is not 7 by 6 inches."
+        }
+      ]
+    },
+    {
+      "run_id": "115",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: On top of the violins, plot each group's median as a single circular marker (marker='o') Observed: The code does not plot any circular markers on top of the violins. The requirement is violated."
+        }
+      ]
+    },
+    {
+      "run_id": "117",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Draw the attractor in a 3D subplot Observed: The plot is 2D, showing u and v axes. The code attempts 3D but falls back to 2D due to missing z-axis labels.\nRequired: Turn on the grid of the axes Observed: The code sets ax.grid(False), so the grid is off.\nRequired: Label the z axis `w` Observed: The z-axis is not labeled in the figure, and the plot is not 3D."
+        }
+      ]
+    },
+    {
+      "run_id": "124",
+      "errors": []
+    },
+    {
+      "run_id": "125",
+      "errors": []
+    },
+    {
+      "run_id": "126",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The function is (z - 4) * (z - 6) * (z - 8) + 90. Observed: The function `func(x)` in the code is defined as `(x - 4) * (x - 6) * (x - 8) + 60`. This is incorrect; it should be +90.\nRequired: The y-axis starts at 0. Observed: The code does not explicitly set the y-axis limits, so the plot uses the default limits based on the data. The y-axis does not start at 0."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The y-axis starts at 0. Observed: The y-axis in the figure does not start at 0; it starts at a negative value, which violates the requirement."
+        }
+      ]
+    },
+    {
+      "run_id": "128",
+      "errors": []
+    },
+    {
+      "run_id": "129",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image displays a horizontal stacked bar chart, not a doughnut chart as required. Each bar represents a year from 2015 to 2018, with segments for different Windows versions and a white section for other operating systems. The title is correct, and the legend is present. However, the chart type is incorrect, and the data is not presented in concentric rings. The figure is not a valid doughnut chart."
+        }
+      ]
+    },
+    {
+      "run_id": "130",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: DPI: 120 Observed: The code saves the figure with `fig.savefig('figure.png', dpi=72)`. The requested DPI is 120, but the actual DPI is 72.\nRequired: Use a perceptually uniform colormap such as viridis Observed: The code uses `cmap='jet'` in the main plot and `cmap='viridis'` in the fallback. The main plot uses 'jet', which is not perceptually uniform."
+        }
+      ]
+    },
+    {
+      "run_id": "131",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Arrange the four event plots in a 2x2 grid of subplots Observed: fig, axs = plt.subplots(4, 1, figsize=(9, 7)) creates a 4x1 grid, not a 2x2 grid\nRequired: The subplot layout should be 2x2 Observed: The code creates a 4x1 grid, which is not a 2x2 layout"
+        }
+      ]
+    },
+    {
+      "run_id": "135",
+      "errors": []
+    },
+    {
+      "run_id": "136",
+      "errors": []
+    },
+    {
+      "run_id": "141",
+      "errors": []
+    },
+    {
+      "run_id": "142",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Use the specified data: category_names = ['Football', 'Volleyball', 'Basketball', 'Formula 1', 'Tennis'] Observed: The code in STEP 14 uses category_names = ['Football', 'Volleyball', 'Basketball', 'Formula 1'], which is missing 'Tennis'. The data for 'Tennis' is also missing from the results dictionary.\nRequired: Select only the first 4 categories from the data for plotting Observed: The code in STEP 14 uses `data = np.array(list(results.values()))[:, :len(category_names)]`, which selects only the first 4 columns of the data, corresponding to 'Football', 'Volleyball', 'Basketball', and 'Formula 1'."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart must be horizontal. Observed: The code in STEP 14 sets `horizontal = False` and uses `ax.barh` to create a horizontal bar chart.\nRequired: The chart must show a legend naming the five sports. Observed: The code in STEP 14 creates a legend with the category names, but only four sports are included: 'Football', 'Volleyball', 'Basketball', and 'Formula 1'.\nRequired: The chart must have a legend with the correct labels. Observed: The legend is present but only includes four sports instead of the five requested."
+        }
+      ]
+    },
+    {
+      "run_id": "143",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: The y-axis of the first subplot is on a logarithmic scale. Observed: The code in STEP 14 does not set the y-axis to a logarithmic scale for the first subplot. The plot is a semilogy plot, but the code does not use `ax1.set_yscale('log')` or similar.\nRequired: The x-axis of the second subplot is on a logarithmic scale. Observed: The code in STEP 14 does not set the x-axis to a logarithmic scale for the second subplot. The plot is a semilogx plot, but the code does not use `ax2.set_xscale('log')` or similar.\nRequired: Both axes of the third subplot are on a logarithmic scale with a base 3 logarithmic scale on the x-axis. Observed: The code in STEP 14 does not set the axes to a logarithmic scale for the third subplot. The plot is a loglog plot, but the code does not use `ax3.set_xscale('log')` or `ax3.set_yscale('log')` or similar."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The four panels are arranged in a 2x2 grid of subplots. Observed: The code in STEP 14 uses `plt.subplots(1, 4, figsize=(9, 7))` to create a 1x4 grid of subplots, not a 2x2 grid.\nRequired: The logarithmic axes must actually use a log scale (yscale/xscale 'log'). Observed: The code in STEP 14 does not set the axes to a logarithmic scale for any of the subplots. The plots are labeled as semilogy, semilogx, and loglog, but the actual scale is not set in the code.\nRequired: The fourth subplot should have a grid. Observed: The code in STEP 14 does not add a grid to the fourth subplot."
+        }
+      ]
+    },
+    {
+      "run_id": "145",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "146",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The text 'Decreased Sales Performance' at the head of the fishbone diagram is partially cut off at the right edge of the image.\nThe text labels for 'Inadequate Sales Training' and 'Poor Online Presence' are very close and slightly overlap, making them difficult to distinguish."
+        }
+      ]
+    },
+    {
+      "run_id": "150",
+      "errors": []
+    },
+    {
+      "run_id": "153",
+      "errors": []
+    },
+    {
+      "run_id": "155",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The first plot uses a colormap that ranges from dark blue to light yellow. Observed: The script uses cmap='jet' for the first plot, which ranges from dark blue to light yellow.\nRequired: The colormap 'jet' is not used. Observed: The script uses cmap='jet' for the first plot.\nRequired: The first plot uses a colormap that ranges from dark blue to light yellow. Observed: The script uses cmap='jet' for the first plot, which ranges from dark blue to light yellow.\nRequired: The first plot uses a colormap that ranges from dark blue to light yellow. Observed: The script uses cmap='jet' for the first plot, which ranges from dark blue to light yellow."
+        }
+      ]
+    },
+    {
+      "run_id": "156",
+      "errors": []
+    },
+    {
+      "run_id": "161",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Use a secondary y axis created with twinx() so the two series share the x axis. Observed: The script uses `ax2 = ax1`, which creates a shared axis but does not use `twinx()`. The two series are plotted on the same axis, not on separate y-axes.\nRequired: Draw the sin series as a dotted line. Observed: The script plots the sin series with `linestyle='-'`, which is a solid line, not a dotted line.\nRequired: Chart type: two series on the same axes with different left and right scales. Observed: The chart shows two series on the same axes with a logarithmic left y-axis and a linear right y-axis, but they are on the same axis, not separate axes.\nRequired: Axes and scales: left y-axis is logarithmic, right y-axis is linear. Observed: The left y-axis is logarithmic, but the right y-axis is not a separate axis, so the scale is not independently set.\nRequired: Colors and styles: exp(t) in red, sin(2πt) in blue, sin(2πt) as a dotted line. Observed: exp(t) is red, sin(2πt) is blue, but sin(2πt) is plotted with a solid line, not a dotted line."
+        }
+      ]
+    },
+    {
+      "run_id": "163",
+      "errors": []
+    },
+    {
+      "run_id": "164",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The x-axis must start at 0. Observed: The code sets ax.set_xlim(5, 200), so the x-axis starts at 5, not 0."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The annotation text 'race interrupted' is partially overlapped by the red bar segment, and the arrowhead overlaps the text."
+        }
+      ]
+    },
+    {
+      "run_id": "165",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart has a legend. Observed: The plot does not have a legend."
+        }
+      ]
+    },
+    {
+      "run_id": "166",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The rightmost bar labels, such as 'item 49' and 'item 50', are cut off at the right edge of the image.\nThe labels for 'item 49' and 'item 50' are partially obscured by the right edge of the plot area."
+        }
+      ]
+    },
+    {
+      "run_id": "167",
+      "errors": []
+    },
+    {
+      "run_id": "168",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "169",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Give the whole figure a title (a suptitle) Observed: The final figure does not have a suptitle. The code in STEP 14 does not include a call to `fig.suptitle()` or any equivalent."
+        }
+      ]
+    },
+    {
+      "run_id": "170",
+      "errors": []
+    },
+    {
+      "run_id": "171",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "173",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The text box containing the integral formula overlaps the blue curve and the light blue shaded region in the center of the plot.\nThe text box with the integral formula covers the curve and the shaded area, obscuring the data in that region.\nThe light blue shaded region has low contrast against the white background, making it difficult to distinguish."
+        }
+      ]
+    },
+    {
+      "run_id": "175",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Label the x axis. Observed: The code does not include a command to label the x-axis. The final figure shows no x-axis label.\nRequired: The x, y, and z axes should be labeled appropriately. Observed: The code labels the x-axis (missing), y-axis as 'Y', and z-axis as 'Z'. The y and z labels are appropriate, but the x-axis is missing."
+        }
+      ]
+    },
+    {
+      "run_id": "177",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image contains two side-by-side charts. On the left is a bar chart titled 'Fruit basket' showing the distribution of apples, oranges, and bananas, but it is not a pie chart as required. On the right is a stacked bar chart titled 'Age of apple lovers' showing the distribution of apple lovers across age groups, with percentages labeled. However, the left chart is a bar chart, not a pie chart, and the required connection lines between the pie chart slice and the stacked bar chart are missing. The task specifies a pie chart and a stacked bar chart, but the left chart is incorrectly a bar chart. Therefore, the final chart does not meet the requirements."
+        }
+      ]
+    },
+    {
+      "run_id": "180",
+      "errors": []
+    },
+    {
+      "run_id": "181",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "183",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Only include the countries of Asia and Europe. Observed: The script in STEP 14 filters the data with `df = df[df[continent'].isin(['Africa', 'Asia', 'Europe'])]`, which includes Africa, Asia, and Europe. The final figure shows segments for Africa, Asia, and Europe, violating the requirement to exclude Africa."
+        }
+      ]
+    },
+    {
+      "run_id": "191",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The bottom of the chart is cut off, with the last few country codes and the very bottom of the chart not fully visible."
+        }
+      ]
+    },
+    {
+      "run_id": "195",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Select columns: ['0-60 mph(sec)', 'Gas Mileage(mpg)', 'Power(kW)', 'Weight(kg)', 'Engine Displacement(cc)'] Observed: The script in STEP 6 reads the CSV and extracts the columns '0-60 mph(sec)', 'Gas Mileage(mpg)', 'Power(kW)', and 'Engine Displacement(cc)'. The 'Weight(kg)' column is present in the data but not used in the plot, which is a deviation from the request."
+        },
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Projections should be colored blue, red, and green respectively Observed: The projections are colored with the same viridis colormap as the main plot, not with distinct blue, red, and green colors as requested. The color is based on engine displacement, not a fixed color for each projection."
+        }
+      ]
+    },
+    {
+      "run_id": "196",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The legend in the top-right corner overlaps with the data points of Group 2.\nThe legend in the top-right corner partially covers the boxplot and data points for Group 2."
+        }
+      ]
+    },
+    {
+      "run_id": "199",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart has a legend. Observed: The chart does not have a legend.\nRequired: The chart has a colorbar. Observed: The chart does not have a colorbar."
+        }
+      ]
+    },
+    {
+      "run_id": "200",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Y-axis limits: start at 0 Observed: ax.set_ylim(20, 230) in plot.py, so the y-axis starts at 20, not 0\nRequired: Beeswarm plot for Group 2: color orange Observed: ax.scatter(beeswarm(group2, 2), group2, s=18, color='white', label='Group 2', zorder=2) in plot.py"
+        }
+      ]
+    },
+    {
+      "run_id": "202",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Turn on gridlines (horizontal) in both panels. Observed: The script does not include any command to turn on gridlines. The final figure does not show horizontal gridlines.\nRequired: The y-axis label must be `Measured values`. Observed: The script does not set a y-axis label. The final figure does not have a y-axis label."
+        }
+      ]
+    },
+    {
+      "run_id": "203",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Use a polar projection for the axes. Observed: The code in STEP 12 uses `fig.add_subplot()` without a projection argument, resulting in a Cartesian plot. The figure shows a Cartesian coordinate system with x and y axes, not a polar one.\nRequired: Add a colorbar for the point colours. Observed: The code in STEP 12 does not include a call to `plt.colorbar()` or any equivalent function to add a colorbar to the plot.\nRequired: Turn on the polar grid. Observed: The code in STEP 12 includes `ax.grid(True)`, which turns on the grid. However, the grid is a Cartesian grid, not a polar grid, as the axes are not in polar projection."
+        }
+      ]
+    },
+    {
+      "run_id": "204",
+      "errors": []
+    },
+    {
+      "run_id": "205",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The text 'Hurray!' is partially cut off at the top-left corner of the image."
+        }
+      ]
+    },
+    {
+      "run_id": "206",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart must have a title. Observed: The final image does not have a title.\nRequired: The chart must have a DPI of 100. Observed: The code does not specify a DPI, so the default DPI is used."
+        }
+      ]
+    },
+    {
+      "run_id": "208",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "209",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The top of the title is cut off at the upper edge of the image.\nThe legend in the top-right corner overlaps with the data points of Group 2.\nThe legend box covers part of the beeswarm plot for Group 2."
+        }
+      ]
+    },
+    {
+      "run_id": "210",
+      "errors": []
+    },
+    {
+      "run_id": "212",
+      "errors": []
+    },
+    {
+      "run_id": "213",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Draw the three quartile lines as dashed red lines Observed: ax_box.axvline(value, color='red', linestyle='-', linewidth=1.2, clip_on=False, ymin=-0.1, ymax=0.75) and ax_hist.axvline(value, color='red', linestyle='-', linewidth=1.2, clip_on=False, ymin=0, ymax=1.03)\nRequired: The box plot must have a legend Observed: No legend is present in the code or the figure"
+        }
+      ]
+    },
+    {
+      "run_id": "214",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: Each frequency line marked with circular marker (marker='o') Observed: Code: ax.plot(t, np.full_like(t, i), s, color=c, label=freqs[i]). This uses a line plot without any marker specification. The figure shows lines without circular markers."
+        }
+      ]
+    },
+    {
+      "run_id": "216",
+      "errors": [
+        {
+          "family": "wrong_data",
+          "evidence": "Required: Each topic's three values sum to 100. Observed: The values for each topic sum to 100: Remote Work (62+21+17=100), Four-Day Week (71+18+11=100), AI Coding Tools (28+30+25=83), Open Floor Plans (45+24+48=117). The values for AI Coding Tools and Open Floor Plans are incorrect."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "task_id": "channel-click-rates",
+  "task_class": "filtered aggregation",
+  "instructions": "Using matplotlib, create a vertical bar chart from the records below. Each record lists year, status, channel, impressions, and clicks.\n\n2025, final, Search, 100, 30\n2025, final, Search, 900, 60\n2025, final, Social, 200, 20\n2025, final, Social, 800, 10\n2025, final, Email, 100, 30\n2025, final, Email, 900, 90\n2024, final, Search, 1000, 400\n2024, final, Social, 1000, 600\n2024, final, Email, 1000, 200\n2025, draft, Search, 1000, 500\n2025, draft, Social, 1000, 700\n2025, draft, Email, 1000, 100\n\nUse only records from 2025 with status final. For each channel, calculate the click-through rate as 100 times total clicks divided by total impressions across the retained records. Do not average the individual records' click-through rates. Plot the channels from highest to lowest rate, with one blue bar per channel. Label each bar with its rate to one decimal place followed by a percent sign. Use the title 'Final campaign click-through rates (2025)', the x-axis label 'Channel', and the y-axis label 'Click-through rate (%)'. Set the y-axis limits to 0 and 15. Use a 6 by 4 inch figure at 150 DPI. Keep all text fully visible and readable, and save the chart as figure.png.",
+  "inputs": []
+}

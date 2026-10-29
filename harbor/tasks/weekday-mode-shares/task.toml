@@ -1,0 +1,37 @@
+schema_version = "1.4"
+artifacts = ["/app/figure.png", "/app/plot.py", "/app/plotted_values.json"]
+
+[task]
+name = "cmu-11768/weekday-mode-shares"
+version = "1.0.0"
+description = "Plot travel-mode shares for weekday trips in Central."
+keywords = ["visualization", "matplotlib"]
+
+[[task.authors]]
+name = "Yuntian Shen"
+
+[metadata]
+task_class = "filtered aggregation"
+chart_family = "pie"
+source = "tasks/weekday-mode-shares/task.json"
+
+[verifier]
+timeout_sec = 600.0
+
+[verifier.env]
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 900.0
+os = "linux"
+cpus = 1
+memory_mb = 2048
+mcp_servers = []
+
+[environment.env]
+MPLBACKEND = "Agg"
+
+[solution.env]

@@ -1,0 +1,99 @@
+{
+  "predictions": [
+    {
+      "run_id": "channel-click-rates__glm",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "completed-order-revenue__glm",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "course-enrollment-labels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "course-enrollment-labels__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "course-enrollment-labels__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: size/DPI: 7 by 5 inch figure at 150 DPI Observed: The code uses `plt.savefig('figure.png', dpi=150)`. However, the figure size is not set. The default size is used, which is not 7 by 5 inches. The figure size is not specified in the code.\nRequired: exact labels/titles: title 'Course enrollment', x-axis label 'Course', y-axis label 'Students' Observed: The code uses `plt.title('Course Enrollment')`, `plt.xlabel('Course')`, and `plt.ylabel('Students')`. The title is 'Course Enrollment' (with a capital 'E'), not 'Course enrollment' as requested. The x and y labels are correct.\nRequired: annotations: enrollment number above every bar Observed: The code does not add any text annotations above the bars. The enrollment numbers are not displayed on the chart.\nRequired: font size: at least 9 points for all text Observed: The code does not set a font size. The default font size is used, which is likely less than 9 points.\nRequired: layout: adjust so labels do not overlap and no text is cut off Observed: The code uses `plt.xticks(..., rotation=45)` to rotate the labels, which helps prevent overlap. However, the x-axis labels are still partially cut off at the bottom of the figure. The title is also partially cut off at the top. The layout is not adjusted to prevent clipping."
+        }
+      ]
+    },
+    {
+      "run_id": "service-response-panels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "service-response-panels__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "service-response-panels__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "weekday-mode-shares__glm",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The rendered figure is difficult to read because the labels for the Bus and Bicycle slices are partially cut off at the edges of the pie chart, making them hard to see clearly. The text is also very close to the edge of the image, which reduces readability. While the information is present, the layout makes it challenging to fully read the labels without zooming in."
+        }
+      ]
+    },
+    {
+      "run_id": "weekday-mode-shares__ministral",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The rendered figure is difficult to read because the labels for the pie chart slices are overlapping with the slices themselves, making it hard to distinguish which label corresponds to which slice. The text is also partially obscured by the pie chart, especially the \"Bus\" label which is inside the large blue slice. This makes the chart less clear and harder to interpret."
+        }
+      ]
+    },
+    {
+      "run_id": "weekday-mode-shares__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image displays only the title 'Weekday travel in Central' at the top center of a blank white background. There is no pie chart, slices, labels, or any data visualization elements present. The chart is missing entirely."
+        }
+      ]
+    }
+  ]
+}

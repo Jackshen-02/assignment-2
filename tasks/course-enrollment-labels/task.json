@@ -1,0 +1,6 @@
+{
+  "task_id": "course-enrollment-labels",
+  "task_class": "crowded layouts",
+  "instructions": "Using matplotlib, create a vertical bar chart from this synthetic course enrollment data. Each line gives the full course name and number of students.\n\nIntroduction to Statistical Learning: 48\nApplied Data Visualization: 35\nFoundations of Database Systems: 42\nPractical Natural Language Processing: 27\nProbability for Computing: 31\nResponsible Artificial Intelligence: 22\n\nShow all six courses in the listed order from left to right, with one blue bar per course. Use each full course name as its x-axis tick label without abbreviations. You may wrap the names onto multiple lines or rotate them. Add the enrollment number above every bar. Use the title 'Course enrollment', the x-axis label 'Course', and the y-axis label 'Students'. Set the y-axis limits to 0 and 60. Use a 7 by 5 inch figure at 150 DPI and a font size of at least 9 points for all text. Adjust the layout so labels do not overlap and no text is cut off. Save figure.png.",
+  "inputs": []
+}

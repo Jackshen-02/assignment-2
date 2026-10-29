@@ -11,5 +11,13 @@ __pycache__/
 # Harbor run artifacts
 /jobs/
 
+# LaTeX auxiliary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+/report*.log
+/report*.out
+
 # OS metadata
 .DS_Store

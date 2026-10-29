@@ -1,0 +1,6 @@
+{
+  "task_id": "completed-order-revenue",
+  "task_class": "filtered aggregation",
+  "instructions": "Using matplotlib, create a vertical bar chart from these synthetic order records. Each record lists status, product, quantity, and unit price in dollars.\n\ncompleted, Notebook, 4, 10\ncompleted, Notebook, 6, 15\ncompleted, Pen, 10, 2\ncompleted, Pen, 20, 3\ncompleted, Folder, 5, 4\ncompleted, Folder, 10, 3\ncancelled, Notebook, 20, 10\ncancelled, Pen, 100, 2\ncancelled, Folder, 50, 4\n\nUse only completed orders. Calculate each order's revenue as quantity times unit price, then sum the revenue for each product. Plot one blue bar per product in alphabetical order from left to right. Label every bar with its revenue in whole dollars. Use the title 'Revenue from completed orders', the x-axis label 'Product', and the y-axis label 'Revenue ($)'. Start the y-axis at zero and leave enough room above the bars for the value labels. Use a 6 by 4 inch figure at 150 DPI. Keep all text fully visible and readable, and save figure.png.",
+  "inputs": []
+}

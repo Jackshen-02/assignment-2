@@ -1,0 +1,98 @@
+{
+  "labels": [
+    {
+      "run_id": "channel-click-rates__glm",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No figure.png was delivered at the required workspace path. The trajectory attempts to read data.csv without creating it and submits without a saved final figure."
+        }
+      ]
+    },
+    {
+      "run_id": "completed-order-revenue__glm",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No figure.png was delivered. The plotting command saves to output/revenue.png instead of the required figure.png path, so the final artifact is missing."
+        }
+      ]
+    },
+    {
+      "run_id": "course-enrollment-labels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "course-enrollment-labels__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "course-enrollment-labels__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "The requested enrollment numbers above the bars are missing, and the required Course x-axis label is entirely outside the saved image. The plotting code does not set the requested 7 by 5 inch figure size; its 960 by 720 pixel output at 150 DPI corresponds to 6.4 by 4.8 inches. The title also changes Course enrollment to Course Enrollment."
+        },
+        {
+          "family": "hard_to_read",
+          "evidence": "The long course names on the x-axis extend below the saved image and are heavily clipped, so the full labels cannot be read."
+        }
+      ]
+    },
+    {
+      "run_id": "service-response-panels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "service-response-panels__ministral",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "Both three-column legends run horizontally along the bottom. Their text overlaps between panels, and legend entries are partly cut off at the left and right image edges."
+        }
+      ]
+    },
+    {
+      "run_id": "service-response-panels__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No figure.png was delivered. The plotting command saves to plots/service_response_panels.png instead of the required figure.png path, so the final artifact is missing."
+        }
+      ]
+    },
+    {
+      "run_id": "weekday-mode-shares__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weekday-mode-shares__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weekday-mode-shares__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The saved figure.png contains only the title and a blank canvas, with no pie chart. The code reads values with leading spaces but filters day_type against weekday without removing the spaces, leaving no rows to plot."
+        }
+      ]
+    }
+  ]
+}

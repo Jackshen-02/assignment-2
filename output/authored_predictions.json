@@ -1,0 +1,99 @@
+{
+  "predictions": [
+    {
+      "run_id": "channel-click-rates__glm",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "channel-click-rates__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "completed-order-revenue__glm",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "completed-order-revenue__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "course-enrollment-labels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "course-enrollment-labels__ministral",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart has a legend. Observed: The final script (STEP 2) does not include a legend, and the final image does not have one.\nRequired: The chart has a colorbar. Observed: The final script (STEP 2) does not include a colorbar, and the final image does not have one."
+        }
+      ]
+    },
+    {
+      "run_id": "course-enrollment-labels__qwen",
+      "errors": [
+        {
+          "family": "wrong_chart",
+          "evidence": "Required: The chart has a title 'Course enrollment'. Observed: The title of the chart is 'Course Enrollment', but it is misspelled as 'Course Enrollment' instead of 'Course enrollment'. The capitalization of 'Enrollment' is incorrect.\nRequired: The figure size is 7 by 5 inches. Observed: The figure size is not set in the code. The default figure size is used, which is 6.4 by 4.8 inches, not 7 by 5 inches.\nRequired: The enrollment number is added above every bar. Observed: The enrollment numbers are not added above the bars in the final figure. This requirement is not met."
+        }
+      ]
+    },
+    {
+      "run_id": "service-response-panels__glm",
+      "errors": []
+    },
+    {
+      "run_id": "service-response-panels__ministral",
+      "errors": [
+        {
+          "family": "hard_to_read",
+          "evidence": "The bottom legend is partially cut off at the image boundary, with the last few characters of the service names missing.\nThe legend at the bottom of the image overlaps the x-axis labels of the right subplot, making the '12:00' label partially obscured.\nThe legend at the bottom of the image covers the x-axis labels of both subplots, particularly the '12:00' label on the right."
+        }
+      ]
+    },
+    {
+      "run_id": "service-response-panels__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "No final figure was provided for this run."
+        }
+      ]
+    },
+    {
+      "run_id": "weekday-mode-shares__glm",
+      "errors": []
+    },
+    {
+      "run_id": "weekday-mode-shares__ministral",
+      "errors": []
+    },
+    {
+      "run_id": "weekday-mode-shares__qwen",
+      "errors": [
+        {
+          "family": "execution_failure",
+          "evidence": "The image displays only the title 'Weekday travel in Central' at the top center of a blank white background. There is no pie chart, slices, labels, or any data visualization elements present. The chart is missing entirely."
+        }
+      ]
+    }
+  ]
+}
